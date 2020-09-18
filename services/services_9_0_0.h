@@ -161,7 +161,7 @@ public:
         return BAD_VALUE;
     }
 
-    status_t getLayerDebugInfo(std::vector<LayerDebugInfo>*) const {
+    status_t getLayerDebugInfo(std::vector<LayerDebugInfo>*) {
         return 0;
     }
 };
