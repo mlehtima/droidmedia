@@ -31,6 +31,7 @@ BuildRequires: sudo-for-abuild
 BuildRequires: droid-bin-src-full
 Source0:       %{name}-%{version}.tgz
 AutoReqProv:   no
+ExclusiveArch: %{ix86}
 
 %description
 %{summary}
