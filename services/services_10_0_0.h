@@ -47,7 +47,7 @@ public:
     }
 
     sp<IDisplayEventConnection> createDisplayEventConnection(
-            VsyncSource) {
+            VsyncSource, ConfigChanged) {
         return sp<IDisplayEventConnection>();
     }
 
@@ -453,11 +453,15 @@ public:
     void config(const Vector<MediaResourcePolicy> &) {
     }
 
-    void addResource(int, int64_t, const sp<IResourceManagerClient>,
+    void addResource(int, int, int64_t, const sp<IResourceManagerClient>,
         const Vector<MediaResource> &) {
     }
 
-    void removeResource(int, int64_t) {
+    void removeResource(int, int64_t,
+        const Vector<MediaResource> &) {
+    }
+
+    void removeClient(int, int64_t) {
     }
 
     bool reclaimResource(int, const Vector<MediaResource> &) {
